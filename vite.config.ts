@@ -16,6 +16,7 @@ export default defineConfig(({ mode, command }) => {
           index: "./src/index.ts",
           string: "./src/modules/string.ts",
           array: "./src/modules/array.ts",
+          browser: "./src/modules/browser.ts",
           other: "./src/modules/other.ts",
         },
         formats: ["es"],

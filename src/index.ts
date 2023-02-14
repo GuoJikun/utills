@@ -1,8 +1,9 @@
 import str from "./modules/string";
 import arr from "./modules/array";
+import browser from "./modules/browser";
 import other from "./modules/other";
 
-export { str, arr, other };
+export { str, arr, browser, other };
 
 export type DataType =
   | "string"
@@ -36,5 +37,6 @@ export const isBoolean = <T>(val: T) => typeof val === "boolean";
 export default {
   str,
   arr,
+  browser,
   other,
 };

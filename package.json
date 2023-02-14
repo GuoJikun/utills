@@ -26,6 +26,10 @@
       "import": "./dist/es/arr.js",
       "types": "./types/es/arr.d.ts"
     },
+    "./browser": {
+      "import": "./dist/es/browser.js",
+      "types": "./types/es/browser.d.ts"
+    },
     "./other": {
       "import": "./dist/es/other.js",
       "types": "./types/es/other.d.ts"
