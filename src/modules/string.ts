@@ -37,6 +37,14 @@ export const thousandsSeparator = (val: string | number, separator = ",") => {
   return val.replace(/(\d)(?=(?:\d{4})+$)/, `$1${separator}`);
 };
 
+/**string转unicode */
+export const str2unicode = (val: string): Array<number> => {
+  if (typeof val === "string") {
+    return val.split("").map((c: string) => c.charCodeAt(0));
+  }
+  throw new Error("string2unicode的参数只能是string类型");
+};
+
 export default {
   trim,
   trimStart,
