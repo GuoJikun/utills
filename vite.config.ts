@@ -20,6 +20,7 @@ export default defineConfig(({ mode, command }) => {
           other: "./src/modules/other.ts",
           type: "./src/modules/type.ts",
           cookie: "./src/modules/cookie.ts",
+          function: "./src/modules/func.ts",
         },
         formats: ["es"],
         fileName(format, entryName) {

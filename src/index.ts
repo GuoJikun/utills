@@ -41,19 +41,23 @@ export {
   isString,
 } from "./modules/type";
 
+export { Browser, currentHref, addClass, removeClass } from "./modules/browser";
+export { Func, debounce, throttle } from "./modules/func";
+
 import _String from "./modules/string";
 import _Array from "./modules/array";
-import browser from "./modules/browser";
+import Browser from "./modules/browser";
 import other from "./modules/other";
-
 import Cookie from "./modules/cookie";
 import Type from "./modules/cookie";
+import Func from "./modules/func";
 
 export default {
   _String,
   _Array,
-  browser,
+  Browser,
   other,
   Cookie,
   Type,
+  Func,
 };
