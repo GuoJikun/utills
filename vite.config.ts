@@ -18,6 +18,8 @@ export default defineConfig(({ mode, command }) => {
           array: "./src/modules/array.ts",
           browser: "./src/modules/browser.ts",
           other: "./src/modules/other.ts",
+          type: "./src/modules/type.ts",
+          cookie: "./src/modules/cookie.ts",
         },
         formats: ["es"],
         fileName(format, entryName) {
