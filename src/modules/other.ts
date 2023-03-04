@@ -43,6 +43,37 @@ export function uuid(): string {
   var uuid = s.join("");
   return uuid;
 }
+/**生成随机数 */
+export const RandomNum = (min: number, max: number) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+export const fileToDataUrl = (file: File): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      resolve(reader.result as string);
+    };
+
+    reader.onerror = (e) => {
+      reject(e);
+    };
+    reader.readAsDataURL(file);
+  });
+};
+
+export const fileToBinaryArray = (file: File): Promise<ArrayBuffer> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      resolve(reader.result as ArrayBuffer);
+    };
+
+    reader.onerror = (e) => {
+      reject(e);
+    };
+    reader.readAsArrayBuffer(file);
+  });
+};
 
 export default {
   downloadByBlob,

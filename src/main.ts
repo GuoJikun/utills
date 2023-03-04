@@ -20,3 +20,6 @@ console.log(Type.is(Math));
 console.log(Type.is(() => {}));
 console.log(Type.is(new Date()));
 console.log(Type.is(new RegExp("12")));
+
+console.log(Type.isNumber(123));
+console.log(Type.isNumber("23"));

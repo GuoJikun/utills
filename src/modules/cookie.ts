@@ -19,12 +19,6 @@ export class Cookie {
   }
   /**
    * 添加cookie
-   * @param sKey
-   * @param sValue
-   * @param vEnd
-   * @param sPath
-   * @param sDomain
-   * @param bSecure
    */
   public static setItem(
     sKey: string,
