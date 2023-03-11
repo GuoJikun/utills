@@ -1,6 +1,18 @@
 import { defineConfig } from "vite";
 import { fileURLToPath, URL } from "node:url";
+import { readdirSync } from "node:fs";
+import { resolve } from "node:path";
 
+const getPagePathList = () => {
+  const pages = readdirSync(resolve(__dirname, "src/modules"));
+  let map = {};
+  pages.forEach((c) => {
+    const t = c;
+    map[t.replace(".ts", "")] = resolve(__dirname, "src/modules", c);
+  });
+
+  return map;
+};
 export default defineConfig(({ mode, command }) => {
   console.log(command, mode);
   return {
@@ -14,13 +26,7 @@ export default defineConfig(({ mode, command }) => {
       lib: {
         entry: {
           index: "./src/index.ts",
-          string: "./src/modules/string.ts",
-          array: "./src/modules/array.ts",
-          browser: "./src/modules/browser.ts",
-          other: "./src/modules/other.ts",
-          type: "./src/modules/type.ts",
-          cookie: "./src/modules/cookie.ts",
-          function: "./src/modules/func.ts",
+          ...getPagePathList(),
         },
         formats: ["es"],
         fileName(format, entryName) {
